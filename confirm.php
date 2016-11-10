@@ -1,20 +1,10 @@
 <?php
 include('incs/options.php');
 include('head.php');
-//if(isset($_POST['name'])){
-	//$amt1 =  htmlspecialchars(mysql_real_escape_string($_POST['amount'])) * 100 ;
 	 $amt1 = $_POST['amount'] * 100;
 	 $_SESSION['amt4hash'] =  $amt1;
 	 $tref =  $_SESSION['genref']  ;
-	//$_SESSION['pdtid'] = $pdid = 6259;
-//$_SESSION['item'] = $pitem =  101;
-//$rurl = "http://localhost/webpaytest/tpay.php";
-//$mac = "B86327F372D8F236238E11044E1C57EC93FA6BAFB7C3146556DF7BD98016F7B461E3DAAE37FB2C8FF114EA40921D9C1EB5E7B21837215DA6E744831A9F6F35F4";
-//$tohash = $tref.$pdid.$pitem.$amt1.$rurl.$mac;
-//$dhash =  hash('sha512',$tohash);
-//$_SESSION['hashout'] = $dhash;
-	
-//}
+
 
 ?>
 
@@ -33,7 +23,7 @@ include('head.php');
                     <div class="panel-body">
                         <span class="glyphicon-credit-card"></span>
 
-                        <form name="contactform" method="post" action="https://stageserv.interswitchng.com/test_paydirect/pay">
+                        <form name="contactform" method="post" action="https://sandbox.interswitchng.com/webpay/pay">
                             <h4><span class="glyphicon glyphicon-pushpin"></span>
                                 Your Reference: <p>(<span style="color:#F00"><?php echo $tref ;?></span>)</p><br />
                                 You are paying : <p>(<span style="color:#F00"><?php echo $_SESSION['amt4hash']/100; ?></span>)</p>

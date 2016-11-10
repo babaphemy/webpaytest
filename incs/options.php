@@ -9,7 +9,7 @@
     $pdtid = 6205;
     $payitemid = 101;
     $currencycode = 566;
-    $paytest = "https://stageserv.interswitchng.com/test_paydirect/pay";
+    $paytest = "https://sandbox.interswitchng.com/webpay/api/v1/gettransaction.json";
     $paylive = "https://webpay.interswitchng.com/paydirect/pay";
     $callbackpage = "http://localhost/webpaytest/tpay.php";
     $reference = dotref();
@@ -67,8 +67,8 @@
     }
 
 function query($ppp, $am, $rff,$mac){		
-	//$query_url = 'https://stageserv.interswitchng.com/test_paydirect/api/v1/gettransaction.json';
-        $query_url = 'https://webpay.interswitchng.com/paydirect/api/v1/gettransaction.json';
+	$query_url = 'https://sandbox.interswitchng.com/webpay/api/v1/gettransaction.json';
+        //$query_url = 'https://webpay.interswitchng.com/paydirect/api/v1/gettransaction.json';
         $url 	= "$query_url?productid=$ppp&transactionreference=$rff&amount=$am";
         //note the variables appended to the url as get values for these parameters
 		$tryhash = $ppp.$rff.$mac;

@@ -4,8 +4,6 @@ include('head.php');
 include('incs/options.php');
 $submittedref = $_POST['txnref'];
 $submittedamt = $_SESSION['amt4hash'];
-
-
 ?>
 
 <body>
@@ -55,9 +53,6 @@ $json = dquery($submittedamt, $submittedref);
                 <div class="caption">
                     <span class="glyphicon glyphicon-ok"></span>
                     <img src="css/thankyou.jpg" alt="ok"/>
-
-
-
 
 
 
